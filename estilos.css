@@ -1,0 +1,144 @@
+/* Resetear estilos por defecto del navegador */
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --color-text-btn: #1F5991;
+    --color-bg-btn-hover-top: #FFEDD9;
+    --color-bg-btn-hover-bottom: #FFD574;
+    --color-border-elements: #8E9CAD;
+    --color-bg-calculator: #D9E4F1;
+    --color-border-calculator: #EAD390;
+    --color-bg-btn-close: #E04343;
+    --color-icon-maximize: #898989;
+    --color-bg-btn-minimize-hover: #3665B3;
+}
+
+.container{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+
+.calculator {
+    border:  5px solid var(--color-border-calculator);
+    border-top-width: 0;
+    background-color: var(--color-bg-calculator);
+    width: 450px;
+    height: 450px;
+    max-width: 270px;
+    margin: 25px auto 25px;
+    box-shadow: 0 0 0 1px var(--color-border-elements), 0 0 3px var(--color-border-elements);
+}
+
+.window-controls {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-border-calculator);
+    font-family: arial;
+    padding-bottom: 7px;
+}
+
+.window-controls--left {
+    padding-top: 14px;
+    padding-left: 3px;
+}
+
+.window-controls--right span {
+    display: inline-block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.window-controls--right span:not(:last-child) {
+    padding-left: 7px;
+    padding-right: 7px;
+    transition: .1s all linear;
+}
+
+.window-controls--right span:first-child:hover {
+    background-color: var(--color-bg-btn-minimize-hover);
+    color: white;
+}
+
+.window-controls--right span:nth-child(2) {
+    color: var(--color-icon-maximize);
+}
+
+.window-controls--right span:last-child {
+    padding-left: 14px;
+    padding-right: 14px;
+    background: var(--color-bg-btn-close);
+    color: white;
+}
+
+.display, .keyboard__btn {
+	border: 1px solid var(--color-border-elements);
+    border-radius: 3px;
+}
+
+.display {
+	margin: 12px 12px 6px;
+    background-image: linear-gradient(var(--color-bg-calculator), white);
+    padding-bottom: 6px;
+    padding-top: 3px;
+    
+}
+
+.display__top, .display__bottom {
+	display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    max-width: 100%;
+}
+
+.display__top {
+	font-size: 20px;
+    height: 23px;
+}
+
+.display__bottom {
+	font-size: 35px;
+    font-weight: bold;
+    height: 40px;
+}
+
+.keyboard {
+    margin: 0 12px 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keyboard__btn {
+    width: 54.5px;
+    height: 54px;
+    text-transform: uppercase;
+    transition: .1s all linear;
+}
+
+.keyboard__btn:hover {
+    background-image: linear-gradient(var(--color-bg-btn-hover-top), var(--color-bg-btn-hover-bottom));
+    box-shadow: 0 0 2px 1px var(--color-bg-btn-hover-bottom);
+}
+
+.keyboard__btn:not(:nth-child(4)):not(:nth-child(8)):not(:nth-child(12)):not(:nth-child(16)):not(:nth-child(19)) {
+    margin-right: 6px;
+}
+
+.keyboard__btn:not(:nth-child(17)):not(:nth-child(18)):not(:nth-child(19)) {
+	margin-bottom: 6px;
+}
+
+.keyboard__btn:nth-child(17) {
+	width: 115px;
+}
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="iconos/fontello.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+   <div class="calculator">
+        <div class="window-controls">
+            <div class="window-controls--left">
+                <span>
+                    <i class="demo-icon icon-calc"></i>
+                </span>
+                <span>Calculadora</span>
+            </div>
+            <div class="window-controls--right">
+                <span>
+                    <i class="icon-window-minimize"></i>
+                </span>
+                <span>
+                    <i class="icon-window-maximize"></i>
+                </span>
+                <span>
+                    <i class="icon-cancel"></i>
+                </span>
+            </div>
+        </div>
+        <div class="display">
+           <input type="text" class="display__top" readonly>
+           <input type="text" class="display__bottom" readonly>
+        </div>
+        <div class="keyboard">
+            <button class="keyboard__btn" id="delete-one">&larr;</button>
+            <button class="keyboard__btn" id="ce">c</button>
+            <button class="keyboard__btn" id="c">ac</button>
+            <button class="keyboard__btn" id="div">/</button>
+            <button class="keyboard__btn" id="7">7</button>
+            <button class="keyboard__btn" id="8">8</button>
+            <button class="keyboard__btn" id="9">9</button>
+            <button class="keyboard__btn" id="mul">*</button>
+            <button class="keyboard__btn" id="4">4</button>
+            <button class="keyboard__btn" id="5">5</button>
+            <button class="keyboard__btn" id="6">6</button>
+            <button class="keyboard__btn" id="sub">-</button>
+            <button class="keyboard__btn" id="1">1</button>
+            <button class="keyboard__btn" id="2">2</button>
+            <button class="keyboard__btn" id="3">3</button>
+            <button class="keyboard__btn" id="sum">+</button>
+            <button class="keyboard__btn" id="0">0</button>
+            <button class="keyboard__btn" id="point">.</button>
+            <button class="keyboard__btn" id="equal">=</button>
+        </div>
+    </div>
+
+    <div class="con col-4">
+        <h4 class="display-4 text-center">Historial</h4>
+        <button class="btn btn-outline-danger btn-sm mb-3" id="btndelete">Limpiar Historial</button>
+        <div id="contenedor"></div>
+    </div>   
+</div>
+    <script src="jquery.js"></script>
+    <script src="operaciones.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+</body>
+</html>
